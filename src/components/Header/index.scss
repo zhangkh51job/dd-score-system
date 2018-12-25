@@ -1,0 +1,19 @@
+#header {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position:relative;
+  margin:20px;
+  .go-back {
+    color: rgb(0,153,255);
+    position: absolute;
+    top: 50%;
+    left:0;
+    transform: translateY(-50%);
+
+  }
+
+  .title {
+    text-align: center;
+  }
+}

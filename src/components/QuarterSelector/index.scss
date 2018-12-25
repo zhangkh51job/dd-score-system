@@ -1,0 +1,104 @@
+@import "../../style/mixin";
+
+#quartSelector {
+  position: relative;
+  z-index: 160;
+  @include px2rem(height, 100);
+  background-color: #fff;
+  border-bottom: 1px solid $greyBorder;
+  .year-selector {
+    display: flex;
+    flex-shrink: 0;
+    @include px2rem(width, 160);
+    @include px2rem(font-size, 26);
+    align-items: center;
+    justify-content: center;
+    .year-txt {
+      line-height: normal;
+      display: inline-block;
+      color: $dingBlur;
+      @include px2rem(margin-left, 30);
+    }
+    .icon-arrow, .icon-border {
+      line-height: normal;
+      display: inline-block;
+    }
+    .icon-arrow {
+      @include px2rem(width, 19);
+      @include px2rem(height, 10);
+      @include px2rem(margin-left, 20);
+      @include px2rem(margin-right, 34);
+      background: url("../../assets/year-select-arrow.png");
+      background-size: 100% 100%;
+    }
+    .icon-border {
+      width: 1px;
+      @include px2rem(height, 50);
+
+      background: url("../../assets/year-select-border.png");
+      background-size: 100% 100%;
+    }
+
+    .other-year {
+      position: absolute;
+      left: 0;
+      @include px2rem(top, 100);
+      display: flex;
+      align-items: center;
+      z-index: 160;
+      color: #999;
+      background: #fff;
+      @include px2rem(width, 160);
+      @include px2rem(height, 110);
+      @include px2rem(font-size, 26);
+      @include px2rem(padding-left, 30);
+    }
+  }
+  .quarter-selected-container {
+    height: 100%;
+    overflow: auto;
+    .scroll-container {
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding-left: 24px;
+    }
+  }
+  nav {
+    height: 100%;
+    @include px2rem(font-size, 26);
+    display: flex;
+    align-items: center;
+    .nav-item {
+      line-height: normal;
+      display: inline-block;
+      flex-shrink: 0;
+      text-align: center;
+      color: #999;
+      word-break: keep-all;
+      white-space: nowrap;
+      &.active {
+        color: #38adff;
+      }
+      & + .nav-item {
+        //@include px2rem(padding-left, 56);
+        padding-left: 28px;
+      }
+      &:last-child {
+        @include px2rem(padding-right, 50);
+      }
+
+    }
+  }
+}
+
+.mask {
+  position: fixed;
+  @include px2rem(top, 100);
+  right: 0;
+  left: 0;
+  bottom: 0;
+  z-index: 80;
+  background: rgba(0, 0, 0, 0.5);
+}
+

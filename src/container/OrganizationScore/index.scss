@@ -1,0 +1,116 @@
+@import '../../style/mixin';
+
+#OrganizationScore {
+  .list-container {
+    @include px2rem(padding-left, 30);
+    @include px2rem(padding-bottom, 200);
+    @include px2rem(margin-top, 70);
+    section {
+      display: flex;
+      align-items: center;
+      @include px2rem(padding-top, 30);
+      @include px2rem(padding-bottom, 30);
+      @include px2rem(padding-right, 30);
+      border-bottom: 1px solid #e6e6e6;
+      .avatar, .avatar-create {
+        @include px2rem(width, 80);
+        @include px2rem(height, 80);
+        @include px2rem(margin-right, 25);
+        border-radius: 50%;
+      }
+      // 因为如果是钉钉默认头像 钉钉返回的字段是空的 所以手动绘制一个头像
+      .avatar-create {
+        @include px2rem(font-size, 26);
+        color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background: $dingBlur;
+      }
+      .info-container {
+        flex: 1;
+        .name {
+          display: block;
+          color: #333333;
+          @include px2rem(font-size, 30);
+          @include px2rem(margin-bottom, 14);
+        }
+        .job {
+          display: block;
+          @include px2rem(font-size, 26);
+          color: #999;
+        }
+      }
+      .score {
+        @include px2rem(font-size, 30);
+        color: #38adff;
+      }
+    }
+  }
+}
+
+.organization-item {
+  margin: 20px;
+  border: 1px solid #222;
+
+}
+
+.company-name {
+  margin: 20px;
+}
+
+.user-info-container {
+  margin: 20px;
+  border: 1px solid #222;
+}
+
+.select-container {
+  @include px2rem(width, 690);
+  @include px2rem(height, 71);
+  @include px2rem(border-radius, 8);
+  @include px2rem(padding-left, 30);
+  @include px2rem(padding-right, 30);
+  @include px2rem(margin-top, 30);
+  @include px2rem(margin-left, 30);
+  @include px2rem(margin-right, 30);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border: solid 1px #38adff;
+
+  &:after {
+    content: ' ';
+    display: inline-block;
+    @include px2rem(width, 25);
+    @include px2rem(height, 14);
+    background: url("../../assets/arrow-down.png");
+    background-size: 100% 100%;
+  }
+}
+
+.am-list-body {
+  width: 100%;
+}
+
+.select-txt, .am-list-extra {
+  @include px2rem(font-size, 26);
+  color: #999999;
+
+}
+
+.icon-arrow {
+  display: inline-block;
+  @include px2rem(width, 25);
+  @include px2rem(height, 14);
+  background: url("../../assets/arrow-down.png");
+  background-size: 100% 100%;
+}
+
+.img-tip {
+  @include px2rem(width, 403);
+  @include px2rem(height, 339);
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}

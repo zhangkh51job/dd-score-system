@@ -1,0 +1,228 @@
+@import "../../style/mixin";
+
+@mixin topBorder {
+  border-top: solid 1px #38adff;
+}
+
+@mixin leftBorder {
+  border-left: solid 1px #38adff;
+}
+
+@mixin rightBorder {
+  border-right: solid 1px #38adff;
+}
+
+@mixin bottomBorder {
+  border-bottom: solid 1px #38adff;
+}
+
+#guide {
+  .title {
+    @include px2rem(font-size, 38);
+    @include px2rem(margin-left, 30);
+    @include px2rem(padding-top, 50);
+  }
+
+  .list-title {
+  }
+  .title-next-line {
+    display: flex;
+    span {
+      display: inline-block;
+    }
+  }
+  .am-accordion-content-box{
+    @include px2rem(margin-right, 30);
+  }
+  .am-accordion-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    @include px2rem(font-size, 30);
+    @include px2rem(margin-top, 40);
+    @include px2rem(margin-bottom, 31);
+    .arrow {
+      order: 1;
+      display: inline-block;
+      @include px2rem(width, 25);
+      @include px2rem(height, 14);
+      @include px2rem(margin-right, 30);
+      background-image: url('../../assets/arrow-down.png');
+      background-size: 100% 100%;
+    }
+  }
+  .am-accordion-item-active {
+    .arrow {
+      background-image: url('../../assets/arrow-up.png');
+    }
+
+  }
+  .am-accordion-content-inactive {
+    display: none;
+  }
+  .list-container {
+    @include px2rem(margin-top, 28);
+    @include px2rem(margin-left, 30);
+  }
+
+  .am-accordion-item {
+    border-bottom: 1px solid #e6e6e6;
+  }
+
+  .am-list-content {
+    color: #999999;
+    @include px2rem(font-size, 26);
+    @include px2rem(line-height, 44);
+    @include px2rem(margin-bottom, 40);
+    div{
+      word-break: break-all;
+    }
+  }
+
+  .content-item + .content-item {
+    @include px2rem(margin-top, 16);
+
+  }
+
+  .score-guide-container {
+    color: #999999;
+    @include px2rem(font-size, 24);
+    @include leftBorder;
+    @include topBorder;
+    @include px2rem(margin-left, 30);
+    @include px2rem(margin-right, 30);
+    .score-guide-title {
+      @include px2rem(height, 88);
+      display: flex;
+      align-items: center;
+      span {
+        height: 100%;
+        text-align: center;
+        color: #38adff;
+        @include px2rem(font-size, 26);
+        @include rightBorder;
+        @include bottomBorder;
+        background-color: #f5fbff;
+      }
+    }
+  }
+  // 参加培训部分
+  /*  .score-attend-train {
+      display: flex;
+      .train-calc-container {
+        display: flex;
+        flex-direction: column;
+        span {
+          width: 100%;
+          text-align: center;
+          @include px2rem(line-height, 65);
+          @include bottomBorder;
+        }
+      }
+    }*/
+  section {
+    display: flex;
+    .train-calc-container {
+      display: flex;
+      flex-direction: column;
+      span {
+        width: 100%;
+        text-align: center;
+        @include px2rem(line-height, 65);
+        @include bottomBorder;
+
+      }
+    }
+  }
+  .score-guide-left, .score-guide-middle, .score-guide-right {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include rightBorder;
+  }
+  .score-guide-left {
+    @include px2rem(width, 189);
+    @include bottomBorder;
+  }
+  .score-guide-middle {
+    @include px2rem(width, 282);
+    flex-direction: column;
+    .train-project-top {
+      display: flex;
+    }
+    span {
+      width: 100%;
+      text-align: center;
+      @include px2rem(line-height, 65);
+      @include bottomBorder;
+    }
+
+  }
+  .score-guide-right {
+    @include px2rem(width, 220);
+  }
+  // 培训计分项目
+  /*  .train-project-container {
+      flex-direction: column;
+      .train-project-top {
+        display: flex;
+      }
+      span {
+        width: 100%;
+        text-align: center;
+        @include px2rem(line-height, 65);
+        @include bottomBorder;
+      }
+    }*/
+  // 课程类型
+  .train-course-type {
+    @include px2rem(width, 176);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .train-item-name {
+    span {
+      display: block;
+      @include rightBorder;
+      @include px2rem(height, 66);
+
+    }
+    @include px2rem(width, 104);
+    .item-text-top {
+      border-bottom-color: #fff;
+    }
+    .item-text-bottom {
+      line-height: normal;
+    }
+  }
+
+  .score-learn-container {
+    span {
+      @include px2rem(line-height, 36);
+
+      text-align: left;
+      word-break: break-all;
+    }
+    .score-learn-project {
+      @include px2rem(padding-left, 18);
+      @include px2rem(padding-right, 18);
+      @include px2rem(margin-top, 20);
+    }
+  }
+
+  .score-learn-item {
+    height: 100%;
+  }
+  .item-learn-score {
+    line-height: normal;
+    @include px2rem(height, 101);
+  }
+
+  .guide-pic-table {
+    @include px2rem(width, 690);
+    @include px2rem(height, 1137);
+    @include px2rem(margin-top, 50);
+  }
+
+}

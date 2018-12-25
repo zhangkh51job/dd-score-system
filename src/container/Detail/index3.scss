@@ -1,0 +1,90 @@
+@import "../../style/mixin";
+
+#my-score {
+  .detail {
+    position: absolute;
+    top: 50%;
+    right: 0;
+    transform: translateY(-50%);
+    color: rgb(0, 153, 255);
+  }
+  .score-detail {
+    .score-detail-item {
+      display: flex;
+      justify-content: space-between;
+    }
+  }
+
+  .score-container {
+    text-align: center;
+    @include px2rem(width, 396);
+    @include px2rem(height, 322);
+    margin: 0 auto;
+    @include px2rem(margin-top, 60);
+    background: url("../../assets/person-score-circle-2.png");
+    background-size: 100% 100%;
+    .username, .quarter {
+      color: #999999;
+      @include px2rem(font-size, 26);
+    }
+    .username {
+      @include px2rem(padding-top, 86);
+    }
+    .quarter {
+      @include px2rem(margin-top, 19);
+    }
+    .score {
+      color: #38adff;
+      @include px2rem(margin-top, 40);
+      strong {
+
+      }
+      span {
+        @include px2rem(font-size, 72);
+      }
+      .score-txt {
+        @include px2rem(font-size, 34);
+      }
+    }
+  }
+
+  .score-detail-container {
+    @include px2rem(padding-left, 30);
+    @include px2rem(padding-bottom, 200);
+    @include px2rem(margin-top, 84);
+    .detail-title {
+      color: #999;
+      @include px2rem(font-size, 30);
+
+    }
+
+    .detail-icon-title {
+      display: inline-block;
+      @include px2rem(width, 14);
+      @include px2rem(height, 18);
+      @include px2rem(margin-right, 20);
+      background: url("../../assets/person-score-icon-01.png");
+      background-size: 100% 100%;
+
+    }
+    .score-detail-item {
+      display: flex;
+      align-items: center;
+      @include px2rem(height, 110);
+      @include px2rem(font-size, 30);
+      @include px2rem(padding-right, 30);
+      border-bottom: 1px solid $greyBorder;
+      &:first-child {
+        @include px2rem(margin-top, 30);
+      }
+    }
+  }
+
+  footer {
+    display: flex;
+    .footer-btn {
+      flex: 1;
+      text-align: center;
+    }
+  }
+}

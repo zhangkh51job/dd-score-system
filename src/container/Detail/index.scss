@@ -1,0 +1,330 @@
+@import "../../style/mixin";
+
+#score-detail {
+
+  .am-list-extra {
+    text-align: center;
+    vertical-align: bottom;
+  }
+  @include px2rem(padding-top, 40);
+  .detail-container {
+    @include px2rem(margin-top, 16);
+
+    .detail-item {
+      @include px2rem(margin-top, 38);
+      .panel-header {
+        @include px2rem(padding-left, 30);
+        @include px2rem(padding-right, 30);
+        border-bottom: 1px solid $greyBorder;
+      }
+
+      .item-top, .item-bottom {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .item-top {
+
+      }
+
+      .item-bottom {
+        @include px2rem(margin-top, 17);
+        @include px2rem(margin-bottom, 36);
+      }
+
+      .name {
+        line-height: 1.2;
+        display: inline-block;
+        @include px2rem(font-size, 30);
+        @extend .ellipsis;
+      }
+      .score {
+        display: flex;
+        align-items: center;
+        flex-shrink: 0;
+        @include px2rem(font-size, 30);
+        @include px2rem(margin-left, 106);
+      }
+      .add-score {
+        color: #ff6c00;
+        &:before {
+          content: '+';
+        }
+      }
+      .reduce-score {
+        color: #16cc9b;
+      }
+      .icon-arrow {
+        display: inline-block;
+        @include px2rem(width, 25);
+        @include px2rem(height, 14);
+        @include px2rem(margin-left, 15);
+        background-size: 100% 100%;
+      }
+      .icon-arrow-down {
+        background-image: url("../../assets/arrow-down.png");
+      }
+      .icon-arrow-up {
+        background-image: url("../../assets/arrow-up.png");
+      }
+
+      .time, .course {
+        @include px2rem(font-size, 26);
+        color: #999999;
+      }
+      .time {
+
+      }
+      .course {
+
+      }
+    }
+  }
+
+  .collapse-container {
+    background: #fafafa;
+    @include px2rem(padding-bottom, 42);
+    @include px2rem(padding-left, 30);
+    @include px2rem(padding-right, 30);
+    li {
+      display: flex;
+      justify-content: space-between;
+      @include px2rem(padding-top, 40);
+      span {
+        @include px2rem(font-size, 26);
+        color: #999999;
+      }
+    }
+    &.collapse-show {
+
+    }
+  }
+
+  // 输入框
+  .input-container {
+    display: flex;
+    align-items: center;
+    @include px2rem(width, 690);
+    @include px2rem(height, 70);
+    @include px2rem(margin-left, 30);
+    @include px2rem(margin-right, 30);
+    @include px2rem(border-radius, 8);
+    background-color: #f5f5f5;
+    @include px2rem(border-radius, 8);
+    .icon-search {
+      display: inline-block;
+      @include px2rem(width, 27);
+      @include px2rem(height, 27);
+      @include px2rem(margin-left, 23);
+      @include px2rem(margin-right, 10);
+      background: url("../../assets/icon-search.png");
+      background-size: 100% 100%;
+    }
+
+    .input {
+      background: #f5f5f5;
+      border: none;
+      @include px2rem(font-size, 30);
+    }
+    &::placeholder {
+      color: #cccccc;
+    }
+  }
+
+  .btn-container {
+    display: flex;
+    .btn-filter, .btn-cancel {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      @include px2rem(border-radius, 4);
+      @include px2rem(width, 330);
+      @include px2rem(height, 80);
+      @include px2rem(font-size, 30);
+    }
+    .btn-filter {
+      color: #fff;
+      background: $dingBlur;
+    }
+
+    .btn-cancel {
+      color: $dingBlur;
+      background: #fff;
+    }
+  }
+
+  .filter-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 160;
+    background: #fff;
+    .project-type, .select-time-title {
+      @include px2rem(font-size, 30);
+      @include px2rem(padding-left, 30);
+      color: #333333;
+    }
+    .project-type {
+      @include px2rem(padding-top, 40);
+    }
+    .type-container {
+      @include px2rem(margin-top, 40);
+      @include px2rem(padding-left, 30);
+    }
+
+    .type-item-container {
+      @include px2rem(margin-bottom, 30);
+      display: flex;
+    }
+    .type-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      line-height: normal;
+      border: solid 1px #cccccc;
+      @include px2rem(width, 210);
+      @include px2rem(height, 60);
+      @include px2rem(font-size, 26);
+      @include px2rem(margin-right, 30);
+      @include px2rem(border-radius, 4);
+      &.type-item-active {
+        color: $dingBlur;
+        border: 1px solid $dingBlur;
+        background: #eff9ff;
+      }
+    }
+
+    .select-time-title {
+
+    }
+    .btn-time {
+      display: inline-block;
+
+    }
+
+    .tip {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      line-height: normal;
+      @include px2rem(width, 300);
+      @include px2rem(height, 70);
+      background-color: rgba(0, 0, 0, 0.5);
+      @include px2rem(border-radius, 4);
+      @include px2rem(font-size, 30);
+      color: #fff;
+    }
+  }
+
+  .date-picker-container {
+    display: flex;
+    align-items: center;
+    @include px2rem(margin-top, 40);
+    @include px2rem(margin-left, 20);
+    @include px2rem(margin-bottom, 80);
+  }
+
+  .date-picker-list {
+    @include px2rem(width, 210);
+    @include px2rem(height, 60);
+    @include px2rem(border-radius, 4);
+    @include px2rem(font-size, 26);
+    border: solid 1px #cccccc;
+  }
+
+  .date-picker-list-start, .date-picker-list-end {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .line {
+    display: inline-block;
+    @include px2rem(margin-left, 6);
+    @include px2rem(margin-right, 6);
+    @include px2rem(width, 18);
+    @include px2rem(height, 1);
+    border-bottom: 1px solid #ccc;
+  }
+
+  .mask {
+    position: fixed;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    background-color: rgba(127, 127, 127, 0.5);
+    z-index: 80;
+  }
+
+  .nothing-score-item {
+    @include px2rem(width, 284);
+    @include px2rem(height, 334);
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}
+
+// 动画
+.filter-wrap-enter {
+  opacity: 0.01;
+}
+
+.filter-wrap-enter.filter-wrap-enter-active {
+  opacity: 1;
+  transition: all 200ms ease-in;
+}
+
+.filter-wrap-leave {
+  opacity: 1;
+}
+
+.filter-wrap-leave.filter-wrap-leave-active {
+  opacity: 0.01;
+  transition: all 200ms ease-in;
+}
+
+.input-container-v2 {
+  margin-top: 30px;
+  @include px2rem(width, 690);
+  @include px2rem(height, 70);
+  @include px2rem(margin-left, 30);
+  @include px2rem(margin-right, 30);
+  @include px2rem(border-radius, 8);
+  background-color: #f5f5f5;
+  @include px2rem(border-radius, 8);
+  .icon-search {
+    vertical-align: top;
+    display: inline-block;
+    @include px2rem(width, 27);
+    @include px2rem(height, 27);
+    @include px2rem(line-height, 70);
+    @include px2rem(margin-left, 23);
+    @include px2rem(margin-right, 10);
+    @include px2rem(margin-top, 20);
+    background: url("../../assets/icon-search.png");
+    background-size: 100% 100%;
+  }
+  .input {
+    vertical-align: top;
+    display: inline-block;
+    background: #f5f5f5;
+    border: none;
+    @include px2rem(padding-top, 18);
+    @include px2rem(font-size, 28);
+    &::placeholder {
+      color: #cccccc;
+    }
+  }
+}

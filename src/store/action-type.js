@@ -1,0 +1,5 @@
+export const SET_LEADER = 'SET_LEADER'
+export const SET_DEPARTMENTS = 'SET_DEPARTMENTS'
+export const SET_ORG_INFO = 'SET_ORG_INFO'
+export const SET_YEAR_QUARTER = 'SET_YEAR_QUARTER'
+export const SET_SHOW_LOADING = 'SET_SHOW_LOADING'

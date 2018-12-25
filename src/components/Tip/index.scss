@@ -1,0 +1,27 @@
+@import '../../style/mixin';
+
+.tip-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  @include px2rem(bottom, 0);
+  background: #f7f7f7;
+  @include px2rem(height, 106);
+  .tip-icon {
+    display: inline-block;
+    @include px2rem(width, 26);
+    @include px2rem(height, 26);
+    background: url("../../assets/person-score-icon-02.png");
+    background-size: 100% 100%;
+  }
+  .tip-txt {
+    color: #999;
+    @include px2rem(font-size, 26);
+  }
+
+  &.is-leader{
+    @include px2rem(bottom, 100);
+  }
+}

@@ -1,0 +1,102 @@
+@import "../../style/mixin.scss";
+
+#index {
+  min-height: 100%;
+  position: relative;
+  @include px2rem(padding-bottom, 35);
+  .index-header-bg, .index-footer-bg {
+    img {
+      width: 100%;
+      height: 100%;
+      z-index: 1;
+    }
+  }
+  .index-header-bg {
+    @include px2rem(height, 170);
+  }
+  .title {
+    text-align: center;
+  }
+  .router-container {
+    position: relative;
+    z-index: 80;
+  }
+  .router-item {
+    @include px2rem(width, 630);
+    @include px2rem(height, 246);
+    margin: 0 auto;
+    @include px2rem(margin-top, 40);
+    display: flex;
+    background-blend-mode: normal, normal;
+    border-radius: 10px;
+
+    .icon {
+
+    }
+
+    .item-name {
+      display: inline-block;
+      color: #fff;
+      @include px2rem(font-size, 42);
+      @include px2rem(margin-top, 78);
+    }
+    .item-detail {
+      @include px2rem(font-size, 24);
+      @include px2rem(margin-top, 25);
+      color: rgba(255, 255, 255, 0.8);
+    }
+    &:first-child {
+      @include px2rem(margin-top, 54);
+      background-image: linear-gradient(-45deg, #458ef6 0%, #5ab2f9 100%), linear-gradient(#e8e8e8, #e8e8e8);
+      box-shadow: 0 5px 10px #b2cdf3;
+      .icon-img {
+        @include px2rem(width, 139);
+        @include px2rem(height, 147);
+        @include px2rem(margin-left, 83);
+        @include px2rem(margin-top, 50);
+        @include px2rem(margin-right, 69);
+      }
+    }
+
+    &:nth-child(2) {
+      background-image: linear-gradient(-45deg, #f4ba0b 0%, #f4d26c 100%), linear-gradient(#e8e8e8, #e8e8e8);
+      box-shadow: 0 5px 10px #f3dc97;
+      .icon-img {
+        @include px2rem(width, 110);
+        @include px2rem(height, 124);
+        @include px2rem(margin-left, 95);
+        @include px2rem(margin-top, 61);
+        @include px2rem(margin-right, 86);
+      }
+    }
+    &:last-child {
+      background-color: #f0f0f0;
+      .icon-img {
+        @include px2rem(width, 139);
+        @include px2rem(height, 135);
+        @include px2rem(margin-left, 83);
+        @include px2rem(margin-top, 61);
+        @include px2rem(margin-right, 77);
+      }
+      .item-name {
+        color: #999;
+      }
+      .item-detail {
+        color: #ccc;
+      }
+    }
+
+  }
+
+}
+
+.index-footer-bg {
+  position: absolute;
+  left: 0;
+  right: 0;
+  z-index: 0;
+  bottom: 0;
+  @include px2rem(height, 236);
+
+}
+

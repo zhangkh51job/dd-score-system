@@ -1,0 +1,32 @@
+@import '../../style/mixin';
+
+#footer {
+  width: 100%;
+  position: fixed;
+  bottom: 0;
+  display: flex;
+  .btn-my-score, .btn-organization-score {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    @include px2rem(height, 100);
+    @include px2rem(font-size, 34);
+  }
+  .btn-organization-score {
+    background: rgb(0, 153, 255);
+  }
+
+  .btn-my-score {
+    background: #fff;
+    color: #38adff;
+    &.active {
+      background: #38adff;
+      color: #fff;
+    }
+  }
+
+  .btn-organization-score {
+
+  }
+}
